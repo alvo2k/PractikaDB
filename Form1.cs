@@ -23,5 +23,10 @@ namespace PractikaDB
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
+
+        private void comboBoxHairColor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }

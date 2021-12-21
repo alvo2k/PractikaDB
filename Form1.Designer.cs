@@ -81,10 +81,10 @@
             // 
             // tbxSurname
             // 
-            this.tbxSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbxSurname.Location = new System.Drawing.Point(179, 34);
             this.tbxSurname.Name = "tbxSurname";
-            this.tbxSurname.Size = new System.Drawing.Size(326, 30);
+            this.tbxSurname.Size = new System.Drawing.Size(326, 26);
             this.tbxSurname.TabIndex = 1;
             // 
             // groupBoxAnkete
@@ -125,10 +125,10 @@
             // 
             // tbxName
             // 
-            this.tbxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbxName.Location = new System.Drawing.Point(179, 73);
             this.tbxName.Name = "tbxName";
-            this.tbxName.Size = new System.Drawing.Size(326, 30);
+            this.tbxName.Size = new System.Drawing.Size(326, 26);
             this.tbxName.TabIndex = 2;
             // 
             // lblMiddleName
@@ -143,18 +143,18 @@
             // 
             // tbxMiddleName
             // 
-            this.tbxMiddleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxMiddleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbxMiddleName.Location = new System.Drawing.Point(179, 109);
             this.tbxMiddleName.Name = "tbxMiddleName";
-            this.tbxMiddleName.Size = new System.Drawing.Size(326, 30);
+            this.tbxMiddleName.Size = new System.Drawing.Size(326, 26);
             this.tbxMiddleName.TabIndex = 3;
             // 
             // textBox2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox2.Location = new System.Drawing.Point(179, 253);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(326, 30);
+            this.textBox2.Size = new System.Drawing.Size(326, 26);
             this.textBox2.TabIndex = 7;
             // 
             // label2
@@ -180,10 +180,10 @@
             // dateBday
             // 
             this.dateBday.CustomFormat = "dd.MM.yyyy";
-            this.dateBday.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateBday.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dateBday.Location = new System.Drawing.Point(296, 145);
             this.dateBday.Name = "dateBday";
-            this.dateBday.Size = new System.Drawing.Size(209, 30);
+            this.dateBday.Size = new System.Drawing.Size(209, 26);
             this.dateBday.TabIndex = 4;
             // 
             // lblPhone
@@ -198,10 +198,10 @@
             // 
             // tbxPhone
             // 
-            this.tbxPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbxPhone.Location = new System.Drawing.Point(179, 181);
             this.tbxPhone.Name = "tbxPhone";
-            this.tbxPhone.Size = new System.Drawing.Size(326, 30);
+            this.tbxPhone.Size = new System.Drawing.Size(326, 26);
             this.tbxPhone.TabIndex = 5;
             // 
             // lblEmail
@@ -216,10 +216,10 @@
             // 
             // tbxEmail
             // 
-            this.tbxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbxEmail.Location = new System.Drawing.Point(179, 217);
             this.tbxEmail.Name = "tbxEmail";
-            this.tbxEmail.Size = new System.Drawing.Size(326, 30);
+            this.tbxEmail.Size = new System.Drawing.Size(326, 26);
             this.tbxEmail.TabIndex = 6;
             // 
             // lblPosition
@@ -234,10 +234,10 @@
             // 
             // tbxPosition
             // 
-            this.tbxPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbxPosition.Location = new System.Drawing.Point(179, 288);
             this.tbxPosition.Name = "tbxPosition";
-            this.tbxPosition.Size = new System.Drawing.Size(326, 30);
+            this.tbxPosition.Size = new System.Drawing.Size(326, 26);
             this.tbxPosition.TabIndex = 8;
             // 
             // lblCompensation
@@ -252,10 +252,10 @@
             // 
             // tbxCompensation
             // 
-            this.tbxCompensation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxCompensation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbxCompensation.Location = new System.Drawing.Point(179, 325);
             this.tbxCompensation.Name = "tbxCompensation";
-            this.tbxCompensation.Size = new System.Drawing.Size(326, 30);
+            this.tbxCompensation.Size = new System.Drawing.Size(326, 26);
             this.tbxCompensation.TabIndex = 9;
             // 
             // groupBoxPhisics
@@ -287,7 +287,7 @@
             // 
             // comboBoxHairColor
             // 
-            this.comboBoxHairColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxHairColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxHairColor.FormattingEnabled = true;
             this.comboBoxHairColor.Items.AddRange(new object[] {
             "Блонд",
@@ -297,8 +297,9 @@
             "Другой"});
             this.comboBoxHairColor.Location = new System.Drawing.Point(178, 36);
             this.comboBoxHairColor.Name = "comboBoxHairColor";
-            this.comboBoxHairColor.Size = new System.Drawing.Size(326, 33);
+            this.comboBoxHairColor.Size = new System.Drawing.Size(326, 28);
             this.comboBoxHairColor.TabIndex = 10;
+            this.comboBoxHairColor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxHairColor_KeyPress);
             // 
             // lblWeight
             // 
@@ -312,10 +313,10 @@
             // 
             // tbxWeight
             // 
-            this.tbxWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbxWeight.Location = new System.Drawing.Point(178, 75);
             this.tbxWeight.Name = "tbxWeight";
-            this.tbxWeight.Size = new System.Drawing.Size(326, 30);
+            this.tbxWeight.Size = new System.Drawing.Size(326, 26);
             this.tbxWeight.TabIndex = 11;
             // 
             // lblHeight
@@ -330,19 +331,19 @@
             // 
             // tbxHeight
             // 
-            this.tbxHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbxHeight.Location = new System.Drawing.Point(178, 111);
             this.tbxHeight.Name = "tbxHeight";
-            this.tbxHeight.Size = new System.Drawing.Size(326, 30);
+            this.tbxHeight.Size = new System.Drawing.Size(326, 26);
             this.tbxHeight.TabIndex = 12;
             // 
             // checkBoxDisease
             // 
             this.checkBoxDisease.AutoSize = true;
-            this.checkBoxDisease.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxDisease.Location = new System.Drawing.Point(421, 147);
+            this.checkBoxDisease.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBoxDisease.Location = new System.Drawing.Point(432, 148);
             this.checkBoxDisease.Name = "checkBoxDisease";
-            this.checkBoxDisease.Size = new System.Drawing.Size(83, 29);
+            this.checkBoxDisease.Size = new System.Drawing.Size(72, 24);
             this.checkBoxDisease.TabIndex = 13;
             this.checkBoxDisease.Text = "Есть";
             this.checkBoxDisease.UseVisualStyleBackColor = true;
