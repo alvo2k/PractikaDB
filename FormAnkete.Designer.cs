@@ -32,38 +32,38 @@
             this.lblSurname = new System.Windows.Forms.Label();
             this.tbxSurname = new System.Windows.Forms.TextBox();
             this.groupBoxAnkete = new System.Windows.Forms.GroupBox();
-            this.lblName = new System.Windows.Forms.Label();
-            this.tbxName = new System.Windows.Forms.TextBox();
-            this.lblMiddleName = new System.Windows.Forms.Label();
-            this.tbxMiddleName = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblBday = new System.Windows.Forms.Label();
-            this.dateBday = new System.Windows.Forms.DateTimePicker();
-            this.lblPhone = new System.Windows.Forms.Label();
-            this.tbxPhone = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.tbxEmail = new System.Windows.Forms.TextBox();
-            this.lblPosition = new System.Windows.Forms.Label();
-            this.tbxPosition = new System.Windows.Forms.TextBox();
             this.lblCompensation = new System.Windows.Forms.Label();
             this.tbxCompensation = new System.Windows.Forms.TextBox();
+            this.lblPosition = new System.Windows.Forms.Label();
+            this.tbxPosition = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.tbxEmail = new System.Windows.Forms.TextBox();
+            this.lblPhone = new System.Windows.Forms.Label();
+            this.tbxPhone = new System.Windows.Forms.TextBox();
+            this.dateBday = new System.Windows.Forms.DateTimePicker();
+            this.lblBday = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblMiddleName = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbxMiddleName = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.tbxName = new System.Windows.Forms.TextBox();
             this.groupBoxPhisics = new System.Windows.Forms.GroupBox();
-            this.lblHairColor = new System.Windows.Forms.Label();
-            this.comboBoxHairColor = new System.Windows.Forms.ComboBox();
-            this.lblWeight = new System.Windows.Forms.Label();
-            this.tbxWeight = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.checkBoxDisease = new System.Windows.Forms.CheckBox();
             this.lblHeight = new System.Windows.Forms.Label();
             this.tbxHeight = new System.Windows.Forms.TextBox();
-            this.checkBoxDisease = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblWeight = new System.Windows.Forms.Label();
+            this.comboBoxHairColor = new System.Windows.Forms.ComboBox();
+            this.tbxWeight = new System.Windows.Forms.TextBox();
+            this.lblHairColor = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnPhoto = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.groupBoxControls = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnAdmin = new System.Windows.Forms.Button();
             this.groupBoxAnkete.SuspendLayout();
             this.groupBoxPhisics.SuspendLayout();
             this.groupBoxControls.SuspendLayout();
@@ -73,18 +73,20 @@
             // 
             this.lblSurname.AutoSize = true;
             this.lblSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblSurname.Location = new System.Drawing.Point(23, 46);
+            this.lblSurname.Location = new System.Drawing.Point(15, 30);
+            this.lblSurname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(103, 25);
+            this.lblSurname.Size = new System.Drawing.Size(70, 17);
             this.lblSurname.TabIndex = 100;
             this.lblSurname.Text = "Фамилия";
             // 
             // tbxSurname
             // 
             this.tbxSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxSurname.Location = new System.Drawing.Point(179, 34);
+            this.tbxSurname.Location = new System.Drawing.Point(119, 22);
+            this.tbxSurname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxSurname.Name = "tbxSurname";
-            this.tbxSurname.Size = new System.Drawing.Size(326, 26);
+            this.tbxSurname.Size = new System.Drawing.Size(219, 20);
             this.tbxSurname.TabIndex = 1;
             // 
             // groupBoxAnkete
@@ -106,157 +108,176 @@
             this.groupBoxAnkete.Controls.Add(this.lblName);
             this.groupBoxAnkete.Controls.Add(this.tbxName);
             this.groupBoxAnkete.Controls.Add(this.tbxSurname);
-            this.groupBoxAnkete.Location = new System.Drawing.Point(12, 12);
+            this.groupBoxAnkete.Location = new System.Drawing.Point(8, 8);
+            this.groupBoxAnkete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBoxAnkete.Name = "groupBoxAnkete";
-            this.groupBoxAnkete.Size = new System.Drawing.Size(515, 371);
+            this.groupBoxAnkete.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxAnkete.Size = new System.Drawing.Size(343, 241);
             this.groupBoxAnkete.TabIndex = 2;
             this.groupBoxAnkete.TabStop = false;
             this.groupBoxAnkete.Text = "Анкета";
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblName.Location = new System.Drawing.Point(11, 73);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(54, 25);
-            this.lblName.TabIndex = 200;
-            this.lblName.Text = "Имя";
-            // 
-            // tbxName
-            // 
-            this.tbxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxName.Location = new System.Drawing.Point(179, 73);
-            this.tbxName.Name = "tbxName";
-            this.tbxName.Size = new System.Drawing.Size(326, 26);
-            this.tbxName.TabIndex = 2;
-            // 
-            // lblMiddleName
-            // 
-            this.lblMiddleName.AutoSize = true;
-            this.lblMiddleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblMiddleName.Location = new System.Drawing.Point(11, 109);
-            this.lblMiddleName.Name = "lblMiddleName";
-            this.lblMiddleName.Size = new System.Drawing.Size(104, 25);
-            this.lblMiddleName.TabIndex = 400;
-            this.lblMiddleName.Text = "Отчество";
-            // 
-            // tbxMiddleName
-            // 
-            this.tbxMiddleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxMiddleName.Location = new System.Drawing.Point(179, 109);
-            this.tbxMiddleName.Name = "tbxMiddleName";
-            this.tbxMiddleName.Size = new System.Drawing.Size(326, 26);
-            this.tbxMiddleName.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(179, 253);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(326, 26);
-            this.textBox2.TabIndex = 7;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(11, 253);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 25);
-            this.label2.TabIndex = 400;
-            this.label2.Text = "Место работы";
-            // 
-            // lblBday
-            // 
-            this.lblBday.AutoSize = true;
-            this.lblBday.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblBday.Location = new System.Drawing.Point(11, 145);
-            this.lblBday.Name = "lblBday";
-            this.lblBday.Size = new System.Drawing.Size(161, 25);
-            this.lblBday.TabIndex = 600;
-            this.lblBday.Text = "Дата рождения";
-            // 
-            // dateBday
-            // 
-            this.dateBday.CustomFormat = "dd.MM.yyyy";
-            this.dateBday.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateBday.Location = new System.Drawing.Point(296, 145);
-            this.dateBday.Name = "dateBday";
-            this.dateBday.Size = new System.Drawing.Size(209, 26);
-            this.dateBday.TabIndex = 4;
-            // 
-            // lblPhone
-            // 
-            this.lblPhone.AutoSize = true;
-            this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblPhone.Location = new System.Drawing.Point(11, 181);
-            this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(99, 25);
-            this.lblPhone.TabIndex = 80;
-            this.lblPhone.Text = "Телефон";
-            // 
-            // tbxPhone
-            // 
-            this.tbxPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxPhone.Location = new System.Drawing.Point(179, 181);
-            this.tbxPhone.Name = "tbxPhone";
-            this.tbxPhone.Size = new System.Drawing.Size(326, 26);
-            this.tbxPhone.TabIndex = 5;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblEmail.Location = new System.Drawing.Point(11, 217);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(67, 25);
-            this.lblEmail.TabIndex = 602;
-            this.lblEmail.Text = "E-mail";
-            // 
-            // tbxEmail
-            // 
-            this.tbxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxEmail.Location = new System.Drawing.Point(179, 217);
-            this.tbxEmail.Name = "tbxEmail";
-            this.tbxEmail.Size = new System.Drawing.Size(326, 26);
-            this.tbxEmail.TabIndex = 6;
-            // 
-            // lblPosition
-            // 
-            this.lblPosition.AutoSize = true;
-            this.lblPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblPosition.Location = new System.Drawing.Point(11, 288);
-            this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(123, 25);
-            this.lblPosition.TabIndex = 604;
-            this.lblPosition.Text = "Должность";
-            // 
-            // tbxPosition
-            // 
-            this.tbxPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxPosition.Location = new System.Drawing.Point(179, 288);
-            this.tbxPosition.Name = "tbxPosition";
-            this.tbxPosition.Size = new System.Drawing.Size(326, 26);
-            this.tbxPosition.TabIndex = 8;
             // 
             // lblCompensation
             // 
             this.lblCompensation.AutoSize = true;
             this.lblCompensation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblCompensation.Location = new System.Drawing.Point(11, 325);
+            this.lblCompensation.Location = new System.Drawing.Point(7, 211);
+            this.lblCompensation.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCompensation.Name = "lblCompensation";
-            this.lblCompensation.Size = new System.Drawing.Size(73, 25);
+            this.lblCompensation.Size = new System.Drawing.Size(49, 17);
             this.lblCompensation.TabIndex = 606;
             this.lblCompensation.Text = "Доход";
             // 
             // tbxCompensation
             // 
             this.tbxCompensation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxCompensation.Location = new System.Drawing.Point(179, 325);
+            this.tbxCompensation.Location = new System.Drawing.Point(119, 211);
+            this.tbxCompensation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxCompensation.Name = "tbxCompensation";
-            this.tbxCompensation.Size = new System.Drawing.Size(326, 26);
+            this.tbxCompensation.Size = new System.Drawing.Size(219, 20);
             this.tbxCompensation.TabIndex = 9;
+            // 
+            // lblPosition
+            // 
+            this.lblPosition.AutoSize = true;
+            this.lblPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblPosition.Location = new System.Drawing.Point(7, 187);
+            this.lblPosition.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPosition.Name = "lblPosition";
+            this.lblPosition.Size = new System.Drawing.Size(81, 17);
+            this.lblPosition.TabIndex = 604;
+            this.lblPosition.Text = "Должность";
+            // 
+            // tbxPosition
+            // 
+            this.tbxPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxPosition.Location = new System.Drawing.Point(119, 187);
+            this.tbxPosition.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxPosition.Name = "tbxPosition";
+            this.tbxPosition.Size = new System.Drawing.Size(219, 20);
+            this.tbxPosition.TabIndex = 8;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblEmail.Location = new System.Drawing.Point(7, 141);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(47, 17);
+            this.lblEmail.TabIndex = 602;
+            this.lblEmail.Text = "E-mail";
+            // 
+            // tbxEmail
+            // 
+            this.tbxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxEmail.Location = new System.Drawing.Point(119, 141);
+            this.tbxEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxEmail.Name = "tbxEmail";
+            this.tbxEmail.Size = new System.Drawing.Size(219, 20);
+            this.tbxEmail.TabIndex = 6;
+            this.tbxEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxEmail_KeyPress);
+            // 
+            // lblPhone
+            // 
+            this.lblPhone.AutoSize = true;
+            this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblPhone.Location = new System.Drawing.Point(7, 118);
+            this.lblPhone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(68, 17);
+            this.lblPhone.TabIndex = 80;
+            this.lblPhone.Text = "Телефон";
+            // 
+            // tbxPhone
+            // 
+            this.tbxPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxPhone.Location = new System.Drawing.Point(119, 118);
+            this.tbxPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxPhone.Name = "tbxPhone";
+            this.tbxPhone.Size = new System.Drawing.Size(219, 20);
+            this.tbxPhone.TabIndex = 5;
+            // 
+            // dateBday
+            // 
+            this.dateBday.CustomFormat = "dd.MM.yyyy";
+            this.dateBday.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateBday.Location = new System.Drawing.Point(197, 94);
+            this.dateBday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateBday.Name = "dateBday";
+            this.dateBday.Size = new System.Drawing.Size(141, 20);
+            this.dateBday.TabIndex = 4;
+            // 
+            // lblBday
+            // 
+            this.lblBday.AutoSize = true;
+            this.lblBday.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblBday.Location = new System.Drawing.Point(7, 94);
+            this.lblBday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBday.Name = "lblBday";
+            this.lblBday.Size = new System.Drawing.Size(111, 17);
+            this.lblBday.TabIndex = 600;
+            this.lblBday.Text = "Дата рождения";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(7, 164);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 17);
+            this.label2.TabIndex = 400;
+            this.label2.Text = "Место работы";
+            // 
+            // lblMiddleName
+            // 
+            this.lblMiddleName.AutoSize = true;
+            this.lblMiddleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblMiddleName.Location = new System.Drawing.Point(7, 71);
+            this.lblMiddleName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMiddleName.Name = "lblMiddleName";
+            this.lblMiddleName.Size = new System.Drawing.Size(71, 17);
+            this.lblMiddleName.TabIndex = 400;
+            this.lblMiddleName.Text = "Отчество";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox2.Location = new System.Drawing.Point(119, 164);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(219, 20);
+            this.textBox2.TabIndex = 7;
+            // 
+            // tbxMiddleName
+            // 
+            this.tbxMiddleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxMiddleName.Location = new System.Drawing.Point(119, 71);
+            this.tbxMiddleName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxMiddleName.Name = "tbxMiddleName";
+            this.tbxMiddleName.Size = new System.Drawing.Size(219, 20);
+            this.tbxMiddleName.TabIndex = 3;
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblName.Location = new System.Drawing.Point(7, 47);
+            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(35, 17);
+            this.lblName.TabIndex = 200;
+            this.lblName.Text = "Имя";
+            // 
+            // tbxName
+            // 
+            this.tbxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxName.Location = new System.Drawing.Point(119, 47);
+            this.tbxName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxName.Name = "tbxName";
+            this.tbxName.Size = new System.Drawing.Size(219, 20);
+            this.tbxName.TabIndex = 2;
             // 
             // groupBoxPhisics
             // 
@@ -268,22 +289,68 @@
             this.groupBoxPhisics.Controls.Add(this.comboBoxHairColor);
             this.groupBoxPhisics.Controls.Add(this.tbxWeight);
             this.groupBoxPhisics.Controls.Add(this.lblHairColor);
-            this.groupBoxPhisics.Location = new System.Drawing.Point(13, 390);
+            this.groupBoxPhisics.Location = new System.Drawing.Point(9, 253);
+            this.groupBoxPhisics.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBoxPhisics.Name = "groupBoxPhisics";
-            this.groupBoxPhisics.Size = new System.Drawing.Size(514, 184);
+            this.groupBoxPhisics.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxPhisics.Size = new System.Drawing.Size(343, 120);
             this.groupBoxPhisics.TabIndex = 101;
             this.groupBoxPhisics.TabStop = false;
             this.groupBoxPhisics.Text = "Физические показатели";
             // 
-            // lblHairColor
+            // label1
             // 
-            this.lblHairColor.AutoSize = true;
-            this.lblHairColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblHairColor.Location = new System.Drawing.Point(10, 36);
-            this.lblHairColor.Name = "lblHairColor";
-            this.lblHairColor.Size = new System.Drawing.Size(118, 25);
-            this.lblHairColor.TabIndex = 608;
-            this.lblHairColor.Text = "Цвет волос";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(7, 94);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(159, 17);
+            this.label1.TabIndex = 612;
+            this.label1.Text = "Неизлечимые болезни";
+            // 
+            // checkBoxDisease
+            // 
+            this.checkBoxDisease.AutoSize = true;
+            this.checkBoxDisease.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBoxDisease.Location = new System.Drawing.Point(288, 96);
+            this.checkBoxDisease.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxDisease.Name = "checkBoxDisease";
+            this.checkBoxDisease.Size = new System.Drawing.Size(50, 17);
+            this.checkBoxDisease.TabIndex = 13;
+            this.checkBoxDisease.Text = "Есть";
+            this.checkBoxDisease.UseVisualStyleBackColor = true;
+            // 
+            // lblHeight
+            // 
+            this.lblHeight.AutoSize = true;
+            this.lblHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblHeight.Location = new System.Drawing.Point(7, 72);
+            this.lblHeight.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHeight.Name = "lblHeight";
+            this.lblHeight.Size = new System.Drawing.Size(39, 17);
+            this.lblHeight.TabIndex = 610;
+            this.lblHeight.Text = "Рост";
+            // 
+            // tbxHeight
+            // 
+            this.tbxHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxHeight.Location = new System.Drawing.Point(119, 72);
+            this.tbxHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxHeight.Name = "tbxHeight";
+            this.tbxHeight.Size = new System.Drawing.Size(219, 20);
+            this.tbxHeight.TabIndex = 12;
+            // 
+            // lblWeight
+            // 
+            this.lblWeight.AutoSize = true;
+            this.lblWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblWeight.Location = new System.Drawing.Point(7, 49);
+            this.lblWeight.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWeight.Name = "lblWeight";
+            this.lblWeight.Size = new System.Drawing.Size(32, 17);
+            this.lblWeight.TabIndex = 608;
+            this.lblWeight.Text = "Вес";
             // 
             // comboBoxHairColor
             // 
@@ -295,77 +362,42 @@
             "Шатен",
             "Рыжий",
             "Другой"});
-            this.comboBoxHairColor.Location = new System.Drawing.Point(178, 36);
+            this.comboBoxHairColor.Location = new System.Drawing.Point(119, 23);
+            this.comboBoxHairColor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxHairColor.Name = "comboBoxHairColor";
-            this.comboBoxHairColor.Size = new System.Drawing.Size(326, 28);
+            this.comboBoxHairColor.Size = new System.Drawing.Size(219, 21);
             this.comboBoxHairColor.TabIndex = 10;
             this.comboBoxHairColor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxHairColor_KeyPress);
-            // 
-            // lblWeight
-            // 
-            this.lblWeight.AutoSize = true;
-            this.lblWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblWeight.Location = new System.Drawing.Point(10, 75);
-            this.lblWeight.Name = "lblWeight";
-            this.lblWeight.Size = new System.Drawing.Size(45, 25);
-            this.lblWeight.TabIndex = 608;
-            this.lblWeight.Text = "Вес";
             // 
             // tbxWeight
             // 
             this.tbxWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxWeight.Location = new System.Drawing.Point(178, 75);
+            this.tbxWeight.Location = new System.Drawing.Point(119, 49);
+            this.tbxWeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbxWeight.Name = "tbxWeight";
-            this.tbxWeight.Size = new System.Drawing.Size(326, 26);
+            this.tbxWeight.Size = new System.Drawing.Size(219, 20);
             this.tbxWeight.TabIndex = 11;
             // 
-            // lblHeight
+            // lblHairColor
             // 
-            this.lblHeight.AutoSize = true;
-            this.lblHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblHeight.Location = new System.Drawing.Point(10, 111);
-            this.lblHeight.Name = "lblHeight";
-            this.lblHeight.Size = new System.Drawing.Size(57, 25);
-            this.lblHeight.TabIndex = 610;
-            this.lblHeight.Text = "Рост";
-            // 
-            // tbxHeight
-            // 
-            this.tbxHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxHeight.Location = new System.Drawing.Point(178, 111);
-            this.tbxHeight.Name = "tbxHeight";
-            this.tbxHeight.Size = new System.Drawing.Size(326, 26);
-            this.tbxHeight.TabIndex = 12;
-            // 
-            // checkBoxDisease
-            // 
-            this.checkBoxDisease.AutoSize = true;
-            this.checkBoxDisease.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxDisease.Location = new System.Drawing.Point(432, 148);
-            this.checkBoxDisease.Name = "checkBoxDisease";
-            this.checkBoxDisease.Size = new System.Drawing.Size(72, 24);
-            this.checkBoxDisease.TabIndex = 13;
-            this.checkBoxDisease.Text = "Есть";
-            this.checkBoxDisease.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(10, 145);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(228, 25);
-            this.label1.TabIndex = 612;
-            this.label1.Text = "Неизлечимые болезни";
+            this.lblHairColor.AutoSize = true;
+            this.lblHairColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblHairColor.Location = new System.Drawing.Point(7, 23);
+            this.lblHairColor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHairColor.Name = "lblHairColor";
+            this.lblHairColor.Size = new System.Drawing.Size(83, 17);
+            this.lblHairColor.TabIndex = 608;
+            this.lblHairColor.Text = "Цвет волос";
             // 
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.Salmon;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnClear.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnClear.Location = new System.Drawing.Point(283, 580);
+            this.btnClear.Location = new System.Drawing.Point(173, 377);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(115, 36);
+            this.btnClear.Size = new System.Drawing.Size(86, 29);
             this.btnClear.TabIndex = 15;
             this.btnClear.Text = "Очистить";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -375,9 +407,10 @@
             this.btnPhoto.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnPhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnPhoto.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnPhoto.Location = new System.Drawing.Point(15, 580);
+            this.btnPhoto.Location = new System.Drawing.Point(10, 377);
+            this.btnPhoto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPhoto.Name = "btnPhoto";
-            this.btnPhoto.Size = new System.Drawing.Size(194, 36);
+            this.btnPhoto.Size = new System.Drawing.Size(129, 29);
             this.btnPhoto.TabIndex = 14;
             this.btnPhoto.Text = "Загрузить фото";
             this.btnPhoto.UseVisualStyleBackColor = false;
@@ -387,62 +420,70 @@
             this.btnSave.BackColor = System.Drawing.Color.PaleGreen;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnSave.Location = new System.Drawing.Point(404, 580);
+            this.btnSave.Location = new System.Drawing.Point(263, 377);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(123, 36);
+            this.btnSave.Size = new System.Drawing.Size(88, 29);
             this.btnSave.TabIndex = 16;
             this.btnSave.Text = "Сохранить";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // groupBoxControls
             // 
             this.groupBoxControls.Controls.Add(this.button3);
             this.groupBoxControls.Controls.Add(this.button2);
-            this.groupBoxControls.Controls.Add(this.button1);
-            this.groupBoxControls.Location = new System.Drawing.Point(534, 12);
+            this.groupBoxControls.Controls.Add(this.btnAdmin);
+            this.groupBoxControls.Location = new System.Drawing.Point(356, 8);
+            this.groupBoxControls.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBoxControls.Name = "groupBoxControls";
-            this.groupBoxControls.Size = new System.Drawing.Size(194, 211);
+            this.groupBoxControls.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxControls.Size = new System.Drawing.Size(129, 137);
             this.groupBoxControls.TabIndex = 102;
             this.groupBoxControls.TabStop = false;
             this.groupBoxControls.Text = "Панель управления";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button1.Location = new System.Drawing.Point(6, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(184, 55);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Войти как администратор";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.LightCoral;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(6, 89);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(184, 55);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Психологический тест";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(6, 150);
+            this.button3.Location = new System.Drawing.Point(4, 98);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(184, 55);
+            this.button3.Size = new System.Drawing.Size(123, 36);
             this.button3.TabIndex = 19;
             this.button3.Text = "Найти клиента";
             this.button3.UseVisualStyleBackColor = false;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.LightCoral;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(4, 58);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(123, 36);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "Психологический тест";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // btnAdmin
+            // 
+            this.btnAdmin.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnAdmin.Location = new System.Drawing.Point(4, 18);
+            this.btnAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Size = new System.Drawing.Size(123, 36);
+            this.btnAdmin.TabIndex = 17;
+            this.btnAdmin.Text = "Войти как администратор";
+            this.btnAdmin.UseVisualStyleBackColor = false;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
+            // 
             // Form_ankete
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(741, 642);
+            this.ClientSize = new System.Drawing.Size(494, 417);
             this.Controls.Add(this.groupBoxControls);
             this.Controls.Add(this.btnPhoto);
             this.Controls.Add(this.btnSave);
@@ -451,9 +492,11 @@
             this.Controls.Add(this.lblSurname);
             this.Controls.Add(this.groupBoxAnkete);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_ankete";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Работа с клиентами";
             this.Load += new System.EventHandler(this.Form_ankete_Load);
             this.groupBoxAnkete.ResumeLayout(false);
@@ -502,7 +545,7 @@
         private System.Windows.Forms.GroupBox groupBoxControls;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAdmin;
     }
 }
 
