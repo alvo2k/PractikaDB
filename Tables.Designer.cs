@@ -59,6 +59,7 @@
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Добавить строки";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
@@ -69,6 +70,7 @@
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Удалить";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSave
             // 
@@ -79,6 +81,7 @@
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Обновить";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnSearch
             // 
@@ -89,6 +92,7 @@
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Найти";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnAnkete
             // 

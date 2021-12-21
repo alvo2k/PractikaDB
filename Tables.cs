@@ -27,6 +27,7 @@ namespace PractikaDB
             _connection = connection;
         }
 
+        #region Tables
         private void Tables_Load(object sender, EventArgs e)
         {
             this.Left = left + width / 2 - (this.Width / 2);
@@ -37,7 +38,7 @@ namespace PractikaDB
             btnSave.Enabled = false;
             btnSearch.Enabled = false;
         }
-
+                
         private void LoadData(string tabel)
         {
             activeTabel = tabel;
@@ -53,12 +54,11 @@ namespace PractikaDB
             btnSearch.Enabled = true;
         }
 
-
         private void btnAnkete_Click(object sender, EventArgs e)
         {
             LoadData("ankete");
         }
-
+                
         private void btnPhisical_Click(object sender, EventArgs e)
         {
             LoadData("phisical");
@@ -72,6 +72,27 @@ namespace PractikaDB
         private void btnCouple_Click(object sender, EventArgs e)
         {
             LoadData("couple");
+        }
+
+        #endregion Tables
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
