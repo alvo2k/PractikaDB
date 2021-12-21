@@ -16,6 +16,7 @@ namespace PractikaDB
         int left, top, height, width;
         NpgsqlConnection _connection;
         string activeTabel;
+
         public Tables(int X, int Y, int Height, int Width, NpgsqlConnection connection)
         {
             InitializeComponent();
@@ -35,6 +36,42 @@ namespace PractikaDB
             btnDelete.Enabled = false;
             btnSave.Enabled = false;
             btnSearch.Enabled = false;
+        }
+
+        private void LoadData(string tabel)
+        {
+            activeTabel = tabel;
+            var source = new DataTable();
+            string command = $"SELECT * FROM {tabel}";
+            new NpgsqlDataAdapter(command, _connection).Fill(source);
+
+            dataGridView1.DataSource = source;
+
+            btnAdd.Enabled = true;
+            btnDelete.Enabled = true;
+            btnSave.Enabled = true;
+            btnSearch.Enabled = true;
+        }
+
+
+        private void btnAnkete_Click(object sender, EventArgs e)
+        {
+            LoadData("ankete");
+        }
+
+        private void btnPhisical_Click(object sender, EventArgs e)
+        {
+            LoadData("phisical");
+        }
+
+        private void btnPsyco_Click(object sender, EventArgs e)
+        {
+            LoadData("test");
+        }
+
+        private void btnCouple_Click(object sender, EventArgs e)
+        {
+            LoadData("couple");
         }
     }
 }
