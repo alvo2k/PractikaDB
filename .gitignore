@@ -2,3 +2,5 @@
 bin/
 obj/
 
+.vs/PractikaDB/v17/.suo
+*.cache
