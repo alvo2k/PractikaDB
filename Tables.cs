@@ -203,16 +203,109 @@ namespace PractikaDB
                         }
                     case "couple":
                         {
+                            for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
+                            {
+                                var row = dataGridView1.SelectedRows[i].Cells;
+                                var command =
+                                    $"INSERT INTO couple (idhusband, idwife, wedding) " +
+                                    $"VALUES (@idhusband, @idwife, @wedding)";
+
+                                var cmd = new NpgsqlCommand(command, _connection);
+                                cmd.Parameters.Add("@idhusband", NpgsqlDbType.Integer).Value = row["idhusband"].Value;
+                                cmd.Parameters.Add("@idwife", NpgsqlDbType.Integer).Value = row["idwife"].Value;
+                                cmd.Parameters.Add("@wedding", NpgsqlDbType.Date).Value = row["wedding"].Value;
+
+                                try
+                                {
+                                    cmd.ExecuteNonQuery();
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show(ex.ToString());
+                                    return;
+                                }
+                            }
+
+                            MessageBox.Show("Строкы успешно добавлены!", "Успешно");
+                            LoadData(activeTabel);
+
                             return;
                         }
                     default: return;
                 }
             }
+            else
+            {
+                MessageBox.Show("Выберите строки для добавления!", "Строки не выбраны");
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                if (_connection.State != ConnectionState.Open) _connection.Open();
 
+                string from, id;
+                switch (activeTabel)
+                {
+                    case "ankete":
+                        {
+                            from = "ankete";
+                            id = "Idankete";
+                            break;
+                        }
+                    case "phisical":
+                        {
+                            from = "phisical";
+                            id = "Idphisical";
+                            break;
+                        }
+                    case "test":
+                        {
+                            from = "test";
+                            id = "Idtest";
+                            break;
+                        }
+                    case "couple":
+                        {
+                            from = "couple";
+                            id = "Idcouple";
+                            break;
+                        }
+                    default:
+                        {
+                            MessageBox.Show("Ошибка в активной таблице!");
+                            from = "";
+                            id = "";
+                            return;
+                        }
+                }
+
+                for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
+                {
+                    var command = $"DELETE FROM {from} WHERE {id} = {dataGridView1.SelectedRows[i].Cells[id].Value}";
+                    var cmd = new NpgsqlCommand(command, _connection);
+                    try
+                    { 
+                        cmd.ExecuteNonQuery();
+                    }                    
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                        return;
+                    }
+                }
+
+                MessageBox.Show("Строки успешно удалены!", "Успешно");
+                LoadData(activeTabel);
+                return;
+            }
+
+            else
+            {
+                MessageBox.Show("Выберите строки для удаления!", "Строки не выбраны");
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
