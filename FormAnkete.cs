@@ -216,7 +216,7 @@ namespace PractikaDB
 
         private void btnPhoto_Click(object sender, EventArgs e)
         {
-            var photo1 = Microsoft.VisualBasic.Interaction.InputBox("Введите URL фото", "Ссылка на фото", "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Pierre-Person.jpg/1200px-Pierre-Person.jpg");
+            var photo1 = Microsoft.VisualBasic.Interaction.InputBox("Введите URL фото", "Ссылка на фото", "https://rndm.store/images/goods_media/goods-og-2_tab.jpg");
             if (photo1 != "" && photo1 != null)
             {
                 photo = photo1;
