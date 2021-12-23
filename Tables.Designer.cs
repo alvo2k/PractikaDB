@@ -45,17 +45,20 @@
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 61);
+            this.dataGridView1.Location = new System.Drawing.Point(18, 94);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 592);
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.Size = new System.Drawing.Size(1164, 530);
             this.dataGridView1.TabIndex = 0;
             // 
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAdd.Location = new System.Drawing.Point(12, 672);
+            this.btnAdd.Location = new System.Drawing.Point(18, 634);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(129, 43);
+            this.btnAdd.Size = new System.Drawing.Size(194, 43);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Добавить строки";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -64,9 +67,10 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDelete.Location = new System.Drawing.Point(232, 672);
+            this.btnDelete.Location = new System.Drawing.Point(348, 634);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(129, 43);
+            this.btnDelete.Size = new System.Drawing.Size(194, 43);
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Удалить";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -75,9 +79,10 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnSave.Location = new System.Drawing.Point(459, 672);
+            this.btnSave.Location = new System.Drawing.Point(688, 634);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(129, 43);
+            this.btnSave.Size = new System.Drawing.Size(194, 43);
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Обновить";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -86,9 +91,10 @@
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnSearch.Location = new System.Drawing.Point(659, 672);
+            this.btnSearch.Location = new System.Drawing.Point(988, 634);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(129, 43);
+            this.btnSearch.Size = new System.Drawing.Size(194, 43);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Найти";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -97,9 +103,10 @@
             // btnAnkete
             // 
             this.btnAnkete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAnkete.Location = new System.Drawing.Point(12, 12);
+            this.btnAnkete.Location = new System.Drawing.Point(18, 18);
+            this.btnAnkete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAnkete.Name = "btnAnkete";
-            this.btnAnkete.Size = new System.Drawing.Size(129, 43);
+            this.btnAnkete.Size = new System.Drawing.Size(194, 66);
             this.btnAnkete.TabIndex = 1;
             this.btnAnkete.Text = "Анкеты";
             this.btnAnkete.UseVisualStyleBackColor = true;
@@ -108,9 +115,10 @@
             // btnPhisical
             // 
             this.btnPhisical.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnPhisical.Location = new System.Drawing.Point(232, 12);
+            this.btnPhisical.Location = new System.Drawing.Point(348, 18);
+            this.btnPhisical.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPhisical.Name = "btnPhisical";
-            this.btnPhisical.Size = new System.Drawing.Size(129, 43);
+            this.btnPhisical.Size = new System.Drawing.Size(194, 66);
             this.btnPhisical.TabIndex = 1;
             this.btnPhisical.Text = "Физические качества";
             this.btnPhisical.UseVisualStyleBackColor = true;
@@ -119,9 +127,10 @@
             // btnPsyco
             // 
             this.btnPsyco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnPsyco.Location = new System.Drawing.Point(459, 12);
+            this.btnPsyco.Location = new System.Drawing.Point(688, 18);
+            this.btnPsyco.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPsyco.Name = "btnPsyco";
-            this.btnPsyco.Size = new System.Drawing.Size(139, 43);
+            this.btnPsyco.Size = new System.Drawing.Size(208, 66);
             this.btnPsyco.TabIndex = 1;
             this.btnPsyco.Text = "Психологический тест";
             this.btnPsyco.UseVisualStyleBackColor = true;
@@ -130,9 +139,10 @@
             // btnCouple
             // 
             this.btnCouple.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnCouple.Location = new System.Drawing.Point(659, 12);
+            this.btnCouple.Location = new System.Drawing.Point(988, 18);
+            this.btnCouple.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCouple.Name = "btnCouple";
-            this.btnCouple.Size = new System.Drawing.Size(129, 43);
+            this.btnCouple.Size = new System.Drawing.Size(194, 66);
             this.btnCouple.TabIndex = 1;
             this.btnCouple.Text = "Готовые пары";
             this.btnCouple.UseVisualStyleBackColor = true;
@@ -140,9 +150,9 @@
             // 
             // Tables
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 727);
+            this.ClientSize = new System.Drawing.Size(1200, 701);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnDelete);
@@ -153,6 +163,7 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Tables";
             this.Text = "База данных";
             this.Load += new System.EventHandler(this.Tables_Load);
