@@ -102,7 +102,6 @@ namespace PractikaDB
             try
             {
                 connection.Open();
-                MessageBox.Show("БД подключена");
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
@@ -162,7 +161,7 @@ namespace PractikaDB
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            string pass = Microsoft.VisualBasic.Interaction.InputBox("Введите пароль администратора", "Войти как администратор");
+            string pass = Microsoft.VisualBasic.Interaction.InputBox("Введите пароль администратора", "Войти как администратор", "admin");
 
             if (pass == "admin")
             {
@@ -191,12 +190,17 @@ namespace PractikaDB
 
         private void btnPhoto_Click(object sender, EventArgs e)
         {
-            var photo1 = Microsoft.VisualBasic.Interaction.InputBox(
-                "Введите URL фото", "Ссылка на фото");
+            var photo1 = Microsoft.VisualBasic.Interaction.InputBox("Введите URL фото", "Ссылка на фото", "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Pierre-Person.jpg/1200px-Pierre-Person.jpg");
             if (photo1 != "" && photo1 != null)
             {
                 photo = photo1;
                 imageLoaded.Visible = true;
+                try
+                {
+                    pictureBox.ImageLocation = photo;
+                    pictureBox.Visible = true;
+                }
+                catch { }
             }
         }
 
@@ -210,7 +214,7 @@ namespace PractikaDB
             tbxWorkplace.Text = "";
             tbxPosition.Text = "";
             tbxCompensation.Text = "";
-            comboBoxHairColor.SelectedIndex = 0;
+            comboBoxHairColor.Text = "";
             tbxWeight.Text = "";
             tbxHeight.Text = "";
             checkBoxDisease.Checked = false;
@@ -227,8 +231,12 @@ namespace PractikaDB
         }
 
 
+
         #endregion Event
 
-        
+        private void tbxWeight_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyInt(e);
+        }
     }
 }

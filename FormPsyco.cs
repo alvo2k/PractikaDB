@@ -92,6 +92,10 @@ namespace PractikaDB
             try
             {
                 new NpgsqlCommand(command, _connection).ExecuteNonQuery();
+
+                var setID = $"UPDATE ankete SET idtest = (SELECT MAX(idtest) FROM test) WHERE idankete = {_userID}";
+                new NpgsqlCommand(setID, _connection).ExecuteNonQuery();
+
                 MessageBox.Show("Вас можно назвать странным человеком. Многие знакомые замечают ваше необычное поведение, но это их не пугает. Наоборот, они еще больше интересуются вами. Может странности это ваша коронная фишечка, которая придает особый шарм. Ну, а в целом вы вполне адекватны!","Успешно!");
                 this.Close();
             }

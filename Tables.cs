@@ -37,7 +37,7 @@ namespace PractikaDB
             btnAdd.Enabled = false;
             btnDelete.Enabled = false;
             btnSave.Enabled = false;
-            btnSearch.Enabled = false;
+            btnSearch.Enabled = true;
         }
                 
         private void LoadData(string tabel)
@@ -487,7 +487,12 @@ namespace PractikaDB
             if (command == "" || command == null) return;
             try
             {
-                dataGridView1.DataSource = new NpgsqlDataAdapter(command, _connection).Fill(new DataTable());
+                var dt = new DataTable();
+                new NpgsqlDataAdapter(command, _connection).Fill(dt);
+                dataGridView1.DataSource = dt;
+                btnAdd.Enabled = false;
+                btnDelete.Enabled = false;
+                btnSave.Enabled = false;
             }
             catch (Exception ex)
             {

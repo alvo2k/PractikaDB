@@ -61,14 +61,15 @@
             this.btnPhoto = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.groupBoxControls = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.btnPsyco = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.imageLoaded = new System.Windows.Forms.PictureBox();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.groupBoxAnkete.SuspendLayout();
             this.groupBoxPhisics.SuspendLayout();
             this.groupBoxControls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageLoaded)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSurname
@@ -319,6 +320,7 @@
             this.tbxHeight.Name = "tbxHeight";
             this.tbxHeight.Size = new System.Drawing.Size(326, 26);
             this.tbxHeight.TabIndex = 12;
+            this.tbxHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxWeight_KeyPress);
             // 
             // lblWeight
             // 
@@ -353,6 +355,7 @@
             this.tbxWeight.Name = "tbxWeight";
             this.tbxWeight.Size = new System.Drawing.Size(326, 26);
             this.tbxWeight.TabIndex = 11;
+            this.tbxWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxWeight_KeyPress);
             // 
             // lblHairColor
             // 
@@ -405,26 +408,14 @@
             // 
             // groupBoxControls
             // 
-            this.groupBoxControls.Controls.Add(this.button3);
             this.groupBoxControls.Controls.Add(this.btnPsyco);
             this.groupBoxControls.Controls.Add(this.btnAdmin);
             this.groupBoxControls.Location = new System.Drawing.Point(534, 12);
             this.groupBoxControls.Name = "groupBoxControls";
-            this.groupBoxControls.Size = new System.Drawing.Size(194, 211);
+            this.groupBoxControls.Size = new System.Drawing.Size(194, 152);
             this.groupBoxControls.TabIndex = 102;
             this.groupBoxControls.TabStop = false;
             this.groupBoxControls.Text = "Панель управления";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(6, 151);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(184, 55);
-            this.button3.TabIndex = 19;
-            this.button3.Text = "Найти клиента";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // btnPsyco
             // 
@@ -460,11 +451,22 @@
             this.imageLoaded.TabStop = false;
             this.imageLoaded.Visible = false;
             // 
+            // pictureBox
+            // 
+            this.pictureBox.Location = new System.Drawing.Point(532, 170);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(197, 404);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox.TabIndex = 104;
+            this.pictureBox.TabStop = false;
+            this.pictureBox.Visible = false;
+            // 
             // Form_ankete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 642);
+            this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.imageLoaded);
             this.Controls.Add(this.groupBoxControls);
             this.Controls.Add(this.btnPhoto);
@@ -486,6 +488,7 @@
             this.groupBoxPhisics.PerformLayout();
             this.groupBoxControls.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imageLoaded)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -525,10 +528,10 @@
         private System.Windows.Forms.Button btnPhoto;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.GroupBox groupBoxControls;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnPsyco;
         private System.Windows.Forms.Button btnAdmin;
         private System.Windows.Forms.PictureBox imageLoaded;
+        private System.Windows.Forms.PictureBox pictureBox;
     }
 }
 
