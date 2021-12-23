@@ -57,9 +57,10 @@
             // lblCurrentQuestion
             // 
             this.lblCurrentQuestion.AutoSize = true;
+            this.lblCurrentQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblCurrentQuestion.Location = new System.Drawing.Point(547, 162);
             this.lblCurrentQuestion.Name = "lblCurrentQuestion";
-            this.lblCurrentQuestion.Size = new System.Drawing.Size(36, 20);
+            this.lblCurrentQuestion.Size = new System.Drawing.Size(45, 25);
             this.lblCurrentQuestion.TabIndex = 4;
             this.lblCurrentQuestion.Text = "123";
             // 
