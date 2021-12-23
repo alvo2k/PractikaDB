@@ -85,6 +85,11 @@ namespace PractikaDB
             else MessageBox.Show("Неверный пароль!");
         }
 
+        private void btnPsyco_Click(object sender, EventArgs e)
+        {
+
+        }
+
         #endregion Event
 
 

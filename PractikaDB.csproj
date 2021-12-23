@@ -98,6 +98,12 @@
     <Compile Include="FormAnkete.Designer.cs">
       <DependentUpon>FormAnkete.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPsyco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPsyco.Designer.cs">
+      <DependentUpon>FormPsyco.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tables.cs">
       <SubType>Form</SubType>
     </Compile>
