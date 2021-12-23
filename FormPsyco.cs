@@ -55,6 +55,7 @@ namespace PractikaDB
             this.Left = left + width / 2 - (this.Width / 2);
             this.Top = top + height / 2 - (this.Height / 2);
             lblQuestion.Text = questions[currentQuestion];
+            lblCurrentQuestion.Text = "Вопрос " + currentQuestion.ToString() + "из 16";
         }
 
         private void NextQuestion()
@@ -63,6 +64,7 @@ namespace PractikaDB
             try
             {
                 lblQuestion.Text = questions[currentQuestion];
+                lblCurrentQuestion.Text = "Вопрос " + currentQuestion.ToString() + " из 16";
             }
             catch { }
         }
