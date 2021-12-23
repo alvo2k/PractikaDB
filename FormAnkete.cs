@@ -3,6 +3,8 @@ using System.Data;
 using System.Windows.Forms;
 using Npgsql;
 using NpgsqlTypes;
+using System.Net.Mail;
+using System.Net;
 
 namespace PractikaDB
 {
@@ -146,7 +148,31 @@ namespace PractikaDB
             var idSelect = "SELECT MAX(Idankete) FROM ankete";
             new NpgsqlDataAdapter(idSelect, connection).Fill(dt);
             id = Convert.ToInt32(dt.Rows[0][0]);
+            SendMessage();
             MessageBox.Show("Анкета успешно сохранена! \nID для прохождения теста: " + id, "Успешно");
+        }
+
+        private void SendMessage()
+        {
+            SmtpClient Smtp = new SmtpClient("smtp.yandex.ru", 25);
+            Smtp.Credentials = new NetworkCredential("voenkov-alex@yandex.ru", "yatfbpdghuvatpae");
+            Smtp.EnableSsl = true;
+            Smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+            MailMessage Message = new MailMessage();
+            Message.From = new MailAddress("voenkov-alex@yandex.ru", "Бюро знакомств");
+            Message.To.Add(new MailAddress("voenkova@mgok.pro"));
+
+            Message.Subject = "Новая анкета!";
+            string body = $"Новая анкета!\n{tbxName.Text}\n{tbxSurname.Text}\n{tbxMiddleName.Text}";
+            Message.Body = body;
+            try
+            {
+                Smtp.Send(Message);
+            }
+            catch (SmtpException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void comboBoxHairColor_KeyPress(object sender, KeyPressEventArgs e)
@@ -230,13 +256,11 @@ namespace PractikaDB
             OnlyInt(e);
         }
 
-
-
-        #endregion Event
-
         private void tbxWeight_KeyPress(object sender, KeyPressEventArgs e)
         {
             OnlyInt(e);
         }
+
+        #endregion Event
     }
 }
