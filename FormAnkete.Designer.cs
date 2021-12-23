@@ -44,7 +44,7 @@
             this.lblBday = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblMiddleName = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbxWorkplace = new System.Windows.Forms.TextBox();
             this.tbxMiddleName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.tbxName = new System.Windows.Forms.TextBox();
@@ -64,9 +64,11 @@
             this.button3 = new System.Windows.Forms.Button();
             this.btnPsyco = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
+            this.imageLoaded = new System.Windows.Forms.PictureBox();
             this.groupBoxAnkete.SuspendLayout();
             this.groupBoxPhisics.SuspendLayout();
             this.groupBoxControls.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imageLoaded)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSurname
@@ -101,7 +103,7 @@
             this.groupBoxAnkete.Controls.Add(this.lblBday);
             this.groupBoxAnkete.Controls.Add(this.label2);
             this.groupBoxAnkete.Controls.Add(this.lblMiddleName);
-            this.groupBoxAnkete.Controls.Add(this.textBox2);
+            this.groupBoxAnkete.Controls.Add(this.tbxWorkplace);
             this.groupBoxAnkete.Controls.Add(this.tbxMiddleName);
             this.groupBoxAnkete.Controls.Add(this.lblName);
             this.groupBoxAnkete.Controls.Add(this.tbxName);
@@ -130,6 +132,7 @@
             this.tbxCompensation.Name = "tbxCompensation";
             this.tbxCompensation.Size = new System.Drawing.Size(326, 26);
             this.tbxCompensation.TabIndex = 9;
+            this.tbxCompensation.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxCompensation_KeyPress);
             // 
             // lblPosition
             // 
@@ -185,6 +188,7 @@
             this.tbxPhone.Name = "tbxPhone";
             this.tbxPhone.Size = new System.Drawing.Size(326, 26);
             this.tbxPhone.TabIndex = 5;
+            this.tbxPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxPhone_KeyPress);
             // 
             // dateBday
             // 
@@ -225,13 +229,13 @@
             this.lblMiddleName.TabIndex = 400;
             this.lblMiddleName.Text = "Отчество";
             // 
-            // textBox2
+            // tbxWorkplace
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(178, 252);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(326, 26);
-            this.textBox2.TabIndex = 7;
+            this.tbxWorkplace.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxWorkplace.Location = new System.Drawing.Point(178, 252);
+            this.tbxWorkplace.Name = "tbxWorkplace";
+            this.tbxWorkplace.Size = new System.Drawing.Size(326, 26);
+            this.tbxWorkplace.TabIndex = 7;
             // 
             // tbxMiddleName
             // 
@@ -382,6 +386,7 @@
             this.btnPhoto.TabIndex = 14;
             this.btnPhoto.Text = "Загрузить фото";
             this.btnPhoto.UseVisualStyleBackColor = false;
+            this.btnPhoto.Click += new System.EventHandler(this.btnPhoto_Click);
             // 
             // btnSave
             // 
@@ -442,11 +447,22 @@
             this.btnAdmin.UseVisualStyleBackColor = false;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
+            // imageLoaded
+            // 
+            this.imageLoaded.BackgroundImage = global::PractikaDB.Properties.Resources._checked;
+            this.imageLoaded.Location = new System.Drawing.Point(220, 587);
+            this.imageLoaded.Name = "imageLoaded";
+            this.imageLoaded.Size = new System.Drawing.Size(32, 32);
+            this.imageLoaded.TabIndex = 103;
+            this.imageLoaded.TabStop = false;
+            this.imageLoaded.Visible = false;
+            // 
             // Form_ankete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 642);
+            this.Controls.Add(this.imageLoaded);
             this.Controls.Add(this.groupBoxControls);
             this.Controls.Add(this.btnPhoto);
             this.Controls.Add(this.btnSave);
@@ -466,6 +482,7 @@
             this.groupBoxPhisics.ResumeLayout(false);
             this.groupBoxPhisics.PerformLayout();
             this.groupBoxControls.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.imageLoaded)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -481,7 +498,7 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox tbxName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbxWorkplace;
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.TextBox tbxPhone;
         private System.Windows.Forms.DateTimePicker dateBday;
@@ -508,6 +525,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnPsyco;
         private System.Windows.Forms.Button btnAdmin;
+        private System.Windows.Forms.PictureBox imageLoaded;
     }
 }
 
