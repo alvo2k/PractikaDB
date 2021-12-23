@@ -246,37 +246,32 @@ namespace PractikaDB
             {
                 if (_connection.State != ConnectionState.Open) _connection.Open();
 
-                string from, id;
+                string id;
                 switch (activeTabel)
                 {
                     case "ankete":
                         {
-                            from = "ankete";
                             id = "Idankete";
                             break;
                         }
                     case "phisical":
                         {
-                            from = "phisical";
                             id = "Idphisical";
                             break;
                         }
                     case "test":
                         {
-                            from = "test";
                             id = "Idtest";
                             break;
                         }
                     case "couple":
                         {
-                            from = "couple";
                             id = "Idcouple";
                             break;
                         }
                     default:
                         {
                             MessageBox.Show("Ошибка в активной таблице!");
-                            from = "";
                             id = "";
                             return;
                         }
@@ -284,7 +279,7 @@ namespace PractikaDB
 
                 for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
                 {
-                    var command = $"DELETE FROM {from} WHERE {id} = {dataGridView1.SelectedRows[i].Cells[id].Value}";
+                    var command = $"DELETE FROM {activeTabel} WHERE {id} = {dataGridView1.SelectedRows[i].Cells[id].Value}";
                     var cmd = new NpgsqlCommand(command, _connection);
                     try
                     { 
@@ -310,7 +305,180 @@ namespace PractikaDB
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.SelectedCells.Count > 0)
+            {
+                if (_connection.State != ConnectionState.Open) _connection.Open();
 
+                string id = "";
+                switch (activeTabel)
+                {
+                    case "ankete":
+                        {
+                            id = "Idankete";
+                            break;
+                        }
+                    case "phisical":
+                        {
+                            id = "Idphisical";
+                            break;
+                        }
+                    case "test":
+                        {
+                            id = "Idtest";
+                            break;
+                        }
+                    case "couple":
+                        {
+                            id = "Idcouple";
+                            break;
+                        }
+                    default:
+                        {
+                            MessageBox.Show("Ошибка в активной таблице!");
+                            return;
+                        }
+                }
+
+                for (int i = 0; i < dataGridView1.SelectedCells.Count; i++)
+                {
+                    var cell = dataGridView1.SelectedCells[i];
+                    var column = cell.OwningColumn.HeaderText;
+                    var command = $"UPDATE {activeTabel} SET {column} = @a WHERE {id} = '{cell.OwningRow.Cells[id].Value}'";
+                    var cmd = new NpgsqlCommand(command, _connection);
+
+                    switch (column)
+                    {
+                        case "name":
+                            {
+                                cmd.Parameters.Add("@a", NpgsqlDbType.Varchar).Value = cell.Value;
+                                break;
+                            }
+                        case "surname":
+                            {
+                                cmd.Parameters.Add("@a", NpgsqlDbType.Varchar).Value = cell.Value;
+                                break;
+                            }
+                        case "middlename":
+                            {
+                                cmd.Parameters.Add("@a", NpgsqlDbType.Varchar).Value = cell.Value;
+                                break;
+                            }
+                        case "email":
+                            {
+                                cmd.Parameters.Add("@a", NpgsqlDbType.Varchar).Value = cell.Value;
+                                break;
+                            }
+                        case "photo":
+                            {
+                                cmd.Parameters.Add("@a", NpgsqlDbType.Varchar).Value = cell.Value;
+                                break;
+                            }
+                        case "workplace":
+                            {
+                                cmd.Parameters.Add("@a", NpgsqlDbType.Varchar).Value = cell.Value;
+                                break;
+                            }
+                        case "position":
+                            {
+                                cmd.Parameters.Add("@a", NpgsqlDbType.Varchar).Value = cell.Value;
+                                break;
+                            }
+                        case "bday":
+                            {
+                                cmd.Parameters.Add("@a", NpgsqlDbType.Date).Value = cell.Value;
+                                break;
+                            }
+                        case "phone":
+                            {
+                                cmd.Parameters.Add("@a", NpgsqlDbType.Bigint).Value = cell.Value;
+                                break;
+                            }
+                        case "compensation":
+                            {
+                                cmd.Parameters.Add("@a", NpgsqlDbType.Integer).Value = cell.Value;
+                                break;
+                            }
+                        case "idankete":
+                            {
+                                if (activeTabel == "ankete") return;
+                                cmd.Parameters.Add("@a", NpgsqlDbType.Integer).Value = cell.Value;
+                                break;
+                            }
+                        case "haircolor":
+                            {
+                                cmd.Parameters.Add("@a", NpgsqlDbType.Integer).Value = cell.Value;
+                                break;
+                            }
+                        case "weight":
+                            {
+                                cmd.Parameters.Add("@a", NpgsqlDbType.Integer).Value = cell.Value;
+                                break;
+                            }
+                        case "imt":
+                            {
+                                cmd.Parameters.Add("@a", NpgsqlDbType.Numeric).Value = cell.Value;
+                                break;
+                            }
+                        case "height":
+                            {
+                                cmd.Parameters.Add("@a", NpgsqlDbType.Integer).Value = cell.Value;
+                                break;
+                            }
+                        case "score":
+                            {
+                                cmd.Parameters.Add("@a", NpgsqlDbType.Integer).Value = cell.Value;
+                                break;
+                            }
+                        case "idhusband":
+                            {
+                                cmd.Parameters.Add("@a", NpgsqlDbType.Integer).Value = cell.Value;
+                                break;
+                            }
+                        case "idwife":
+                            {
+                                cmd.Parameters.Add("@a", NpgsqlDbType.Integer).Value = cell.Value;
+                                break;
+                            }
+                        case "wedding":
+                            {
+                                cmd.Parameters.Add("@a", NpgsqlDbType.Date).Value = cell.Value;
+                                break;
+                            }
+                        case "idphisical":
+                            {
+                                if (activeTabel == "phisical") return;
+                                cmd.Parameters.Add("@a", NpgsqlDbType.Integer).Value = cell.Value;
+                                break;
+                            }
+                        case "idtest":
+                            {
+                                if (activeTabel == "test") return;
+                                cmd.Parameters.Add("@a", NpgsqlDbType.Integer).Value = cell.Value;
+                                break;
+                            }
+                        default:
+                            {
+                                cmd.Parameters.Add("@a", NpgsqlDbType.Boolean).Value = cell.Value;
+                                break;
+                            }
+                    }
+
+                    try
+                    {
+                        if (cmd.ExecuteNonQuery() != -1)
+                            MessageBox.Show("Ячейка успешно обновлена!", "Успешно");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                }                
+                LoadData(activeTabel);
+            }
+            else
+            {
+                MessageBox.Show("Выберите ячейки для обновления!", "Ячейки не выбраны");
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
