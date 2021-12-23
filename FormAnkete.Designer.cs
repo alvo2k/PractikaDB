@@ -374,6 +374,7 @@
             this.btnClear.TabIndex = 15;
             this.btnClear.Text = "Очистить";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnPhoto
             // 
@@ -450,7 +451,8 @@
             // imageLoaded
             // 
             this.imageLoaded.BackgroundImage = global::PractikaDB.Properties.Resources._checked;
-            this.imageLoaded.Location = new System.Drawing.Point(220, 587);
+            this.imageLoaded.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imageLoaded.Location = new System.Drawing.Point(217, 587);
             this.imageLoaded.Name = "imageLoaded";
             this.imageLoaded.Size = new System.Drawing.Size(32, 32);
             this.imageLoaded.TabIndex = 103;

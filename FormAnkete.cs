@@ -16,6 +16,42 @@ namespace PractikaDB
         }
 
         #region Methods
+        private void SaveAnkete()
+        {
+            var command = $"INSERT INTO ankete " +
+                $"(Name, Surname, Middlename, Bday, Phone, Email, Photo, Workplace, Position, Compensation) " +
+                $"VALUES (@name, @surname, @middlename, @bday, @phone, @email, @photo, @workplace, @position, @compensation)";
+
+            var cmd = new NpgsqlCommand(command, connection);
+            cmd.Parameters.Add("@name", NpgsqlDbType.Varchar).Value = tbxName.Text;
+            cmd.Parameters.Add("@surname", NpgsqlDbType.Varchar).Value = tbxSurname.Text;
+            cmd.Parameters.Add("@middlename", NpgsqlDbType.Varchar).Value = tbxMiddleName.Text;
+            cmd.Parameters.Add("@bday", NpgsqlDbType.Date).Value = dateBday.Value;
+            cmd.Parameters.Add("@phone", NpgsqlDbType.Bigint).Value = Convert.ToInt64(tbxPhone.Text);
+            cmd.Parameters.Add("@email", NpgsqlDbType.Varchar).Value = tbxEmail.Text;
+            cmd.Parameters.Add("@photo", NpgsqlDbType.Varchar).Value = photo;
+            cmd.Parameters.Add("@workplace", NpgsqlDbType.Varchar).Value = tbxWorkplace.Text;
+            cmd.Parameters.Add("@position", NpgsqlDbType.Varchar).Value = tbxPosition.Text;
+            cmd.Parameters.Add("@compensation", NpgsqlDbType.Integer).Value = Convert.ToInt32(tbxCompensation.Text);
+
+            try
+            {
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Данные успешно добавлены", "Успешно!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return;
+            }
+        }
+
+        private void SavePhisics()
+        {
+
+        }
 
         #endregion Methods
 
@@ -84,34 +120,8 @@ namespace PractikaDB
                 return;
             }
 
-            var command = $"INSERT INTO ankete " +
-                $"(Name, Surname, Middlename, Bday, Phone, Email, Photo, Workplace, Position, Compensation) " +
-                $"VALUES (@name, @surname, @middlename, @bday, @phone, @email, @photo, @workplace, @position, @compensation)";
-
-            var cmd = new NpgsqlCommand(command, connection);
-            cmd.Parameters.Add("@name", NpgsqlDbType.Varchar).Value = tbxName.Text;
-            cmd.Parameters.Add("@surname", NpgsqlDbType.Varchar).Value = tbxSurname.Text;
-            cmd.Parameters.Add("@middlename", NpgsqlDbType.Varchar).Value = tbxMiddleName.Text;
-            cmd.Parameters.Add("@bday", NpgsqlDbType.Date).Value = dateBday.Value;
-            cmd.Parameters.Add("@phone", NpgsqlDbType.Bigint).Value = Convert.ToInt64(tbxPhone.Text);
-            cmd.Parameters.Add("@email", NpgsqlDbType.Varchar).Value = tbxEmail.Text;
-            cmd.Parameters.Add("@photo", NpgsqlDbType.Varchar).Value = photo;
-            cmd.Parameters.Add("@workplace", NpgsqlDbType.Varchar).Value = tbxWorkplace.Text;
-            cmd.Parameters.Add("@position", NpgsqlDbType.Varchar).Value = tbxPosition.Text;
-            cmd.Parameters.Add("@compensation", NpgsqlDbType.Integer).Value = Convert.ToInt32(tbxCompensation.Text);
-
-            try
-            {
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    MessageBox.Show("Данные успешно добавлены", "Успешно!");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-                return;
-            }
+            SaveAnkete();
+            SavePhisics();
         }
 
         private void comboBoxHairColor_KeyPress(object sender, KeyPressEventArgs e)
@@ -157,7 +167,27 @@ namespace PractikaDB
         {
             var photo1 = Microsoft.VisualBasic.Interaction.InputBox(
                 "Введите URL фото", "Ссылка на фото");
-            if (photo1 != "" && photo1 != null) photo = photo1;
+            if (photo1 != "" && photo1 != null)
+            {
+                photo = photo1;
+                imageLoaded.Visible = true;
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            tbxName.Text = "";
+            tbxSurname.Text = "";
+            tbxMiddleName.Text = "";
+            tbxPhone.Text = "";
+            tbxEmail.Text = "";
+            tbxWorkplace.Text = "";
+            tbxPosition.Text = "";
+            tbxCompensation.Text = "";
+            comboBoxHairColor.SelectedIndex = 0;
+            tbxWeight.Text = "";
+            tbxHeight.Text = "";
+            checkBoxDisease.Checked = false;
         }
 
         private void tbxCompensation_KeyPress(object sender, KeyPressEventArgs e)
@@ -170,8 +200,9 @@ namespace PractikaDB
             OnlyInt(e);
         }
 
+
         #endregion Event
 
-
+        
     }
 }
