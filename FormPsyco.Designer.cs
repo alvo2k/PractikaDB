@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPsyco));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblCurrentQuestion = new System.Windows.Forms.Label();
             this.btnAnswer = new System.Windows.Forms.Button();
             this.rdoNo = new System.Windows.Forms.RadioButton();
             this.rdoYes = new System.Windows.Forms.RadioButton();
@@ -42,6 +43,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.lblCurrentQuestion);
             this.groupBox1.Controls.Add(this.btnAnswer);
             this.groupBox1.Controls.Add(this.rdoNo);
             this.groupBox1.Controls.Add(this.rdoYes);
@@ -51,6 +53,15 @@
             this.groupBox1.Size = new System.Drawing.Size(1184, 189);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // lblCurrentQuestion
+            // 
+            this.lblCurrentQuestion.AutoSize = true;
+            this.lblCurrentQuestion.Location = new System.Drawing.Point(547, 162);
+            this.lblCurrentQuestion.Name = "lblCurrentQuestion";
+            this.lblCurrentQuestion.Size = new System.Drawing.Size(36, 20);
+            this.lblCurrentQuestion.TabIndex = 4;
+            this.lblCurrentQuestion.Text = "123";
             // 
             // btnAnswer
             // 
@@ -124,5 +135,6 @@
         private System.Windows.Forms.RadioButton rdoYes;
         private System.Windows.Forms.Label lblQuestion;
         private System.Windows.Forms.Button btnAnswer;
+        private System.Windows.Forms.Label lblCurrentQuestion;
     }
 }
