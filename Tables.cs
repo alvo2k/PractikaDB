@@ -484,7 +484,7 @@ namespace PractikaDB
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string command = Microsoft.VisualBasic.Interaction.InputBox("Введите SQL - запрос", "Запрос для поиска");
-                        
+            if (command == "" || command == null) return;
             try
             {
                 dataGridView1.DataSource = new NpgsqlDataAdapter(command, _connection).Fill(new DataTable());

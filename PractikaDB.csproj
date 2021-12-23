@@ -104,7 +104,6 @@
     <Compile Include="FormPsyco.Designer.cs">
       <DependentUpon>FormPsyco.cs</DependentUpon>
     </Compile>
-    <Compile Include="Question.cs" />
     <Compile Include="Tables.cs">
       <SubType>Form</SubType>
     </Compile>

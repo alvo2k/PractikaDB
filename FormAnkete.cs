@@ -87,7 +87,18 @@ namespace PractikaDB
 
         private void btnPsyco_Click(object sender, EventArgs e)
         {
-            var form = new FormPsyco(this.Left, this.Top, this.Height, this.Width, connection);
+            string userID = Microsoft.VisualBasic.Interaction.InputBox("Введить ID анкеты пользователя", "ID проходящего");
+            int user;
+            try
+            {
+                user = Convert.ToInt32(userID);
+            }
+            catch
+            {
+                return;
+            }
+
+            var form = new FormPsyco(this.Left, this.Top, this.Height, this.Width, connection, user);
             form.ShowDialog();
         }
 
