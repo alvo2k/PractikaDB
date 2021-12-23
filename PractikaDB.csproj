@@ -104,6 +104,7 @@
     <Compile Include="FormPsyco.Designer.cs">
       <DependentUpon>FormPsyco.cs</DependentUpon>
     </Compile>
+    <Compile Include="Question.cs" />
     <Compile Include="Tables.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +115,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAnkete.resx">
       <DependentUpon>FormAnkete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPsyco.resx">
+      <DependentUpon>FormPsyco.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tables.resx">
       <DependentUpon>Tables.cs</DependentUpon>

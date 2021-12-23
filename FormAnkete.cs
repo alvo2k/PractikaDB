@@ -87,7 +87,8 @@ namespace PractikaDB
 
         private void btnPsyco_Click(object sender, EventArgs e)
         {
-
+            var form = new FormPsyco(this.Left, this.Top, this.Height, this.Width, connection);
+            form.ShowDialog();
         }
 
         #endregion Event
