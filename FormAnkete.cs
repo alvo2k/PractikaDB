@@ -16,7 +16,7 @@ namespace PractikaDB
         }
 
         #region Methods
-        private void SaveAnkete()
+        private NpgsqlCommand SaveAnkete()
         {
             var command = $"INSERT INTO ankete " +
                 $"(Name, Surname, Middlename, Bday, Phone, Email, Photo, Workplace, Position, Compensation) " +
@@ -27,30 +27,30 @@ namespace PractikaDB
             cmd.Parameters.Add("@surname", NpgsqlDbType.Varchar).Value = tbxSurname.Text;
             cmd.Parameters.Add("@middlename", NpgsqlDbType.Varchar).Value = tbxMiddleName.Text;
             cmd.Parameters.Add("@bday", NpgsqlDbType.Date).Value = dateBday.Value;
-            cmd.Parameters.Add("@phone", NpgsqlDbType.Bigint).Value = Convert.ToInt64(tbxPhone.Text);
+            cmd.Parameters.Add("@phone", NpgsqlDbType.Bigint).Value = Convert.ToInt64(tbxPhone.Text);            
             cmd.Parameters.Add("@email", NpgsqlDbType.Varchar).Value = tbxEmail.Text;
             cmd.Parameters.Add("@photo", NpgsqlDbType.Varchar).Value = photo;
             cmd.Parameters.Add("@workplace", NpgsqlDbType.Varchar).Value = tbxWorkplace.Text;
             cmd.Parameters.Add("@position", NpgsqlDbType.Varchar).Value = tbxPosition.Text;
             cmd.Parameters.Add("@compensation", NpgsqlDbType.Integer).Value = Convert.ToInt32(tbxCompensation.Text);
 
-            try
-            {
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    MessageBox.Show("Данные успешно добавлены", "Успешно!");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-                return;
-            }
+            return cmd;
         }
 
-        private void SavePhisics()
+        private NpgsqlCommand SavePhisics()
         {
+            var command = $"INSERT INTO phisical " +
+                $"(Idankete, Haircolor, Weight, Height, IMT, Disease) " +
+                $"VALUES ((SELECT MAX(Idankete) FROM ankete), @Haircolor, @Weight, @Height, @IMT, @Disease)";
 
+            var cmd = new NpgsqlCommand(command, connection);
+            cmd.Parameters.Add("@Haircolor", NpgsqlDbType.Unknown).Value = comboBoxHairColor.SelectedItem;
+            cmd.Parameters.Add("@Weight", NpgsqlDbType.Integer).Value = Convert.ToInt32(tbxWeight.Text);
+            cmd.Parameters.Add("@Height", NpgsqlDbType.Integer).Value = Convert.ToInt32(tbxHeight.Text);
+            cmd.Parameters.Add("@IMT", NpgsqlDbType.Double).Value = Convert.ToDouble(tbxWeight.Text) / (Convert.ToDouble(tbxHeight.Text) * Convert.ToDouble(tbxHeight.Text));
+            cmd.Parameters.Add("@Disease", NpgsqlDbType.Boolean).Value = checkBoxDisease.Checked;
+
+            return cmd;
         }
 
         #endregion Methods
@@ -119,9 +119,35 @@ namespace PractikaDB
                 MessageBox.Show("Добавте ссылку на фото!", "Требуется ссылка на фото");
                 return;
             }
+            if (tbxPhone.Text == "" || tbxPhone.Text == null)
+            {
+                MessageBox.Show("Укажите телефон!", "Требуется номер телефона");
+                return;
+            }
+            if (comboBoxHairColor.SelectedIndex == -1 || tbxHeight.Text == "" || tbxWeight.Text == "")
+            {
+                MessageBox.Show("Введите все физические величины!", "Требуется указать все физические данные");
+                return;
+            }
 
-            SaveAnkete();
-            SavePhisics();
+            try
+            {                
+                SaveAnkete().ExecuteNonQuery();
+                SavePhisics().ExecuteNonQuery();
+                var updateAnkete = "UPDATE ankete SET idphisical = (SELECT MAX(idphisical) FROM phisical) WHERE Idankete = (SELECT MAX(Idankete) FROM ankete)";
+                new NpgsqlCommand(updateAnkete, connection).ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return;
+            }
+            int id;
+            var dt = new DataTable();
+            var idSelect = "SELECT MAX(Idankete) FROM ankete";
+            new NpgsqlDataAdapter(idSelect, connection).Fill(dt);
+            id = Convert.ToInt32(dt.Rows[0][0]);
+            MessageBox.Show("Анкета успешно сохранена! \nID для прохождения теста: " + id, "Успешно");
         }
 
         private void comboBoxHairColor_KeyPress(object sender, KeyPressEventArgs e)

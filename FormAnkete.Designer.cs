@@ -132,6 +132,7 @@
             this.tbxCompensation.Name = "tbxCompensation";
             this.tbxCompensation.Size = new System.Drawing.Size(326, 26);
             this.tbxCompensation.TabIndex = 9;
+            this.tbxCompensation.Text = "0";
             this.tbxCompensation.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxCompensation_KeyPress);
             // 
             // lblPosition
